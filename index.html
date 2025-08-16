@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculatore-Web-Design</title>
+    <link href="https://fonts.googleapis.com/css2?family=Spartan:wght@700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style>
+        * {
+            font-family:"Spartan";
+        }
+    </style>
+</head>
+<body class="bg-[rgb(59,70,100)] h-screen w-full flex items-center  font-[Spartan]">
+    <!-- Wrapper -->
+     <div class="relative flex min-w-[498px] flex-col items-center justiyf-center p-2 gap-[1rem] mx-auto">
+        <!-- Header -->
+         <div class="w-full h-[70px] text-left text-[32px] text-white font-extrabold">Calculatore</div>
+        <!-- Result -->
+         <div class="w-full h-[75px] flex items-center justify-end  text-white font-extrabold text-[32px] px-5 bg-[rgb(24,31,50)] rounded-[12px]">
+            <p id="result">0</p>
+         </div>
+        <!-- Key Pad -->
+         <div class="w-full h-full bg-[#252d44] rounded-[12px] flex flex-col items-center justify-center space-y-[2rem] p-[2rem]">
+            <!---------------------- Key-line --------------------------->
+            <div class="w-full flex justify-between">
+                <button class="w-full max-w-[88px] min-h-[48px] bg-[rgb(234,227,219)] rounded-[5px] text-[32px] text-[rgb(70,75,94)] shadow-[0px_4px_0px_rgb(182,163,153)] cursor-pointer" id="7">7</button>
+                <button class="w-full max-w-[88px] min-h-[48px] bg-[rgb(234,227,219)] rounded-[5px] text-[32px] text-[rgb(70,75,94)] shadow-[0px_4px_0px_rgb(182,163,153)] cursor-pointer" id="8">8</button>
+                <button class="w-full max-w-[88px] min-h-[48px] bg-[rgb(234,227,219)] rounded-[5px] text-[32px] text-[rgb(70,75,94)] shadow-[0px_4px_0px_rgb(182,163,153)] cursor-pointer" id="9">9</button>
+                <button class="w-full max-w-[88px] min-h-[48px] bg-[rgb(100,113,153)] rounded-[5px] text-[32px] text-white shadow-[0px_4px_0px_rgb(66,78,115)] cursor-pointer" id="delete">Dell</button>
+            </div>
+            <!---------------------- Key-line --------------------------->
+            <div class="w-full flex justify-between">
+                <button class="w-full max-w-[88px] min-h-[48px] bg-[rgb(234,227,219)] rounded-[5px] text-[32px] text-[rgb(70,75,94)] shadow-[0px_4px_0px_rgb(182,163,153)] cursor-pointer" id="4">4</button>
+                <button class="w-full max-w-[88px] min-h-[48px] bg-[rgb(234,227,219)] rounded-[5px] text-[32px] text-[rgb(70,75,94)] shadow-[0px_4px_0px_rgb(182,163,153)] cursor-pointer" id="5">5</button>
+                <button class="w-full max-w-[88px] min-h-[48px] bg-[rgb(234,227,219)] rounded-[5px] text-[32px] text-[rgb(70,75,94)] shadow-[0px_4px_0px_rgb(182,163,153)] cursor-pointer" id="6">6</button>
+                <button class="w-full max-w-[88px] min-h-[48px] bg-[rgb(234,227,219)] rounded-[5px] text-[32px] text-[rgb(70,75,94)] shadow-[0px_4px_0px_rgb(182,163,153)] cursor-pointer" id="plus">+</button>
+            </div>
+            <!---------------------- Key-line --------------------------->
+            <div class="w-full flex justify-between">
+                <button class="w-full max-w-[88px] min-h-[48px] bg-[rgb(234,227,219)] rounded-[5px] text-[32px] text-[rgb(70,75,94)] shadow-[0px_4px_0px_rgb(182,163,153)] cursor-pointer" id="1">1</button>
+                <button class="w-full max-w-[88px] min-h-[48px] bg-[rgb(234,227,219)] rounded-[5px] text-[32px] text-[rgb(70,75,94)] shadow-[0px_4px_0px_rgb(182,163,153)] cursor-pointer" id="2">2</button>
+                <button class="w-full max-w-[88px] min-h-[48px] bg-[rgb(234,227,219)] rounded-[5px] text-[32px] text-[rgb(70,75,94)] shadow-[0px_4px_0px_rgb(182,163,153)] cursor-pointer" id="3">3</button>
+                <button class="w-full max-w-[88px] min-h-[48px] bg-[rgb(234,227,219)] rounded-[5px] text-[32px] text-[rgb(70,75,94)] shadow-[0px_4px_0px_rgb(182,163,153)] cursor-pointer" id="minus">-</button>
+            </div>
+            <!---------------------- Key-line --------------------------->
+            <div class="w-full flex justify-between">
+                <button class="w-full max-w-[88px] min-h-[48px] bg-[rgb(234,227,219)] rounded-[5px] text-[32px] text-[rgb(70,75,94)] shadow-[0px_4px_0px_rgb(182,163,153)] cursor-pointer" id=".">.</button>
+                <button class="w-full max-w-[88px] min-h-[48px] bg-[rgb(234,227,219)] rounded-[5px] text-[32px] text-[rgb(70,75,94)] shadow-[0px_4px_0px_rgb(182,163,153)] cursor-pointer" id="0">0</button>
+                <button class="w-full max-w-[88px] min-h-[48px] bg-[rgb(234,227,219)] rounded-[5px] text-[32px] text-[rgb(70,75,94)] shadow-[0px_4px_0px_rgb(182,163,153)] cursor-pointer" id="divide">/</button>
+                <button class="w-full max-w-[88px] min-h-[48px] bg-[rgb(234,227,219)] rounded-[5px] text-[32px] text-[rgb(70,75,94)] shadow-[0px_4px_0px_rgb(182,163,153)] cursor-pointer" id="multyply">x</button>
+            </div>
+            <!---------------------- Key-line --------------------------->
+            <div class="w-full flex justify-between">
+                <button class="w-[47%] min-h-[48px] bg-[rgb(100,113,153)] rounded-[5px] text-[32px] text-white shadow-[0px_4px_0px_rgb(66,78,115)] cursor-pointer" id="reset">Reset</button>
+                <button class="w-[47%] min-h-[48px] bg-[rgb(209,63,48)] rounded-[5px] text-[32px] text-white shadow-[0px_4px_0px_rgb(144,34,25)] cursor-pointer" id="eqal">=</button>
+            </div>
+        </div>
+     </div>
+     <script>
+        
+        
+     </script>
+    <script src="./app.js"></script> 
+    </body>
+</html>
